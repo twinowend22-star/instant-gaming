@@ -346,10 +346,9 @@
 
     .banner {
       width: 100%;
-      max-width: 100%;
       height: auto;
       display: block;
-      border-radius: 18px;
+      border-radius: 14px;
     }
 
     @media (max-width: 920px) {
@@ -381,10 +380,15 @@
       height: auto;
     }
 	
-	.hero-banner {
-      padding: 24px 42px 0 42px;
+	.top-banner-box {
+      margin: 24px 42px 0 42px;
+      padding: 16px;
+      background: linear-gradient(180deg, rgba(15,15,15,0.92), rgba(10,10,10,0.98));
+      border: 1px solid rgba(121,255,43,0.12);
+      border-radius: 22px;
       position: relative;
       z-index: 1;
+      box-shadow: 0 12px 28px rgba(64,255,0,0.08);
     }
 }
   </style>
@@ -394,7 +398,7 @@
     <div class="glow"></div>
 
     <section class="card">
-      <div class="hero-banner">
+      <div class="top-banner-box">
         <img class="banner" src="banner-o2w2.png" alt="Owned2Win banner">
       </div>
 
