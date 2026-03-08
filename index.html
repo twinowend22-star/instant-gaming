@@ -348,8 +348,7 @@
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 14px;
-      margin-bottom: 20px;
+      border-radius: 18px;
     }
 
     @media (max-width: 920px) {
@@ -380,6 +379,12 @@
       width: 180px;
       height: auto;
     }
+	
+	.hero-banner {
+      padding: 24px 24px 0 24px;
+      position: relative;
+      z-index: 1;
+    }
 }
   </style>
 </head>
@@ -388,9 +393,12 @@
     <div class="glow"></div>
 
     <section class="card">
+      <div class="hero-banner">
+        <img class="banner" src="banner-o2w2.png" alt="Owned2Win banner">
+      </div>
+
       <div class="hero">
         <div class="hero-left">
-		  <img class="banner" src="banner-o2w2.png" alt="Owned2Win banner">
           <div class="badge">O2W • Owned2win • Liens officiels</div>
 
           <h1>Retrouve <span class="accent">Owned2win</span> partout</h1>
