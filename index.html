@@ -343,15 +343,25 @@
       font-size: 13px;
       line-height: 1.6;
     }
-
-    .banner {
-      width: min(100%, 900px);
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 14px;
+	
+    .top-banner-box {
+      margin: 24px 42px 0 42px;
+      position: relative;
+      z-index: 1;
     }
 
+    .banner {
+      width: 100%;
+      aspect-ratio: 4 / 1;
+      border-radius: 22px;
+      background-image: url("banner-o2w2.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid rgba(121,255,43,0.12);
+      box-shadow: 0 12px 28px rgba(64,255,0,0.08);
+    }
+	
     @media (max-width: 920px) {
       .hero {
         grid-template-columns: 1fr;
@@ -380,18 +390,6 @@
       width: 180px;
       height: auto;
     }
-	
-	.top-banner-box {
-      margin: 24px 42px 0 42px;
-      padding: 16px;
-      background: linear-gradient(180deg, rgba(15,15,15,0.92), rgba(10,10,10,0.98));
-      border: 1px solid rgba(121,255,43,0.12);
-      border-radius: 22px;
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 12px 28px rgba(64,255,0,0.08);
-      text-align: center;
-    }
 }
   </style>
 </head>
@@ -401,7 +399,7 @@
 
   <section class="card">
     <div class="top-banner-box">
-      <img class="banner" src="banner-o2w2.png" alt="Owned2Win banner">
+      <div class="banner"></div>
     </div>
 
     <div class="hero">
