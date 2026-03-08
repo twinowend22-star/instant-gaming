@@ -1,47 +1,537 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Partenaire Instant Gaming</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O2W | Tous mes liens</title>
+  <meta name="description" content="Tous les liens officiels Owned2win : Kick, YouTube, X, Discord, Reddit, Tips, Instant Gaming et Own3d." />
+  <style>
+    :root {
+      --bg: #040404;
+      --bg-soft: #0a0a0a;
+      --card: rgba(15, 15, 15, 0.94);
+      --card-2: rgba(19, 19, 19, 0.96);
+      --text: #f4f7f2;
+      --muted: #a8b3a3;
+      --line: rgba(120, 255, 60, 0.16);
+      --green: #79ff2b;
+      --green-2: #49d418;
+      --green-3: #204f11;
+      --shadow: 0 18px 60px rgba(64, 255, 0, 0.12);
+      --radius: 26px;
+    }
 
-<style>
-body {
-  background:#0f1115;
-  color:#fff;
-  font-family: Arial, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-  margin:0;
-}
-.card {
-  background:#1a1d24;
-  padding:24px;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,.5);
-  text-align:center;
-  max-width:900px;
-  width:100%;
-}
-</style>
+    * { box-sizing: border-box; }
 
-<script>
-window.igBannerConfig = {
-  lang: 'fr',
-  igr: 'gamer-8c5d8e',
-  banners: ['ig-banner']
-};
-</script>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at top, rgba(88,255,40,0.12), transparent 34%),
+        radial-gradient(circle at bottom, rgba(88,255,40,0.08), transparent 26%),
+        linear-gradient(180deg, #020202 0%, #060606 100%);
+      color: var(--text);
+      font-family: Inter, Arial, Helvetica, sans-serif;
+    }
 
-<script src="https://www.instant-gaming.com/api/banner/partner/loader.js" defer></script>
+    body {
+      min-height: 100vh;
+      padding: 28px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .glow {
+      position: absolute;
+      inset: -30px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(121,255,43,0.12), transparent 22%),
+        radial-gradient(circle at 85% 90%, rgba(121,255,43,0.08), transparent 20%);
+      filter: blur(18px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(16,16,16,0.95), rgba(8,8,8,0.98));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(121,255,43,0.08), transparent 28%, transparent 72%, rgba(121,255,43,0.04));
+      pointer-events: none;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-left, .hero-right {
+      padding: 42px;
+    }
+
+    .hero-left {
+      border-right: 1px solid rgba(121,255,43,0.10);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border: 1px solid rgba(121,255,43,0.14);
+      border-radius: 999px;
+      background: rgba(121,255,43,0.06);
+      color: #dbffd1;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .logo {
+      width: min(100%, 360px);
+      display: block;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 0 22px rgba(121,255,43,0.22));
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+    }
+
+    .accent {
+      color: var(--green);
+      text-shadow: 0 0 18px rgba(121,255,43,0.12);
+    }
+
+    .lead {
+      margin: 0 0 28px;
+      max-width: 60ch;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 58px;
+      padding: 0 22px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      z-index: 5;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: linear-gradient(180deg, var(--green), var(--green-2));
+      color: #041600;
+      box-shadow: 0 10px 28px rgba(79,255,8,0.25);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.02);
+      color: var(--text);
+      border: 1px solid rgba(121,255,43,0.18);
+    }
+
+    .hero-note {
+      font-size: 14px;
+      color: #cce9c3;
+      margin: 0;
+    }
+
+    .panel {
+      height: 100%;
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .mini-card {
+      padding: 22px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(121,255,43,0.06), rgba(121,255,43,0.02));
+      border: 1px solid rgba(121,255,43,0.12);
+    }
+
+    .mini-card h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.15;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 14px rgba(121,255,43,0.45);
+      margin-top: 8px;
+      flex: 0 0 10px;
+    }
+
+    .sections {
+      position: relative;
+      z-index: 1;
+      padding: 0 42px 42px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .section {
+      background: linear-gradient(180deg, rgba(15,15,15,0.92), rgba(10,10,10,0.98));
+      border: 1px solid rgba(121,255,43,0.12);
+      border-radius: 22px;
+      overflow: hidden;
+    }
+
+    .section-head {
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(121,255,43,0.10);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      padding: 22px;
+    }
+
+    .link-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: linear-gradient(180deg, rgba(121,255,43,0.05), rgba(255,255,255,0.01));
+      border: 1px solid rgba(121,255,43,0.12);
+      border-radius: 18px;
+      padding: 18px;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      position: relative;
+      z-index: 5;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(121,255,43,0.28);
+      box-shadow: 0 12px 28px rgba(64,255,0,0.09);
+    }
+
+    .link-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .link-name {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(121,255,43,0.12);
+      border: 1px solid rgba(121,255,43,0.12);
+      color: #ddffd5;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .link-desc {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .link-url {
+      margin: 0;
+      color: #d9ffd0;
+      font-size: 13px;
+      line-height: 1.45;
+      word-break: break-all;
+      opacity: 0.92;
+    }
+
+    .footer {
+      position: relative;
+      z-index: 1;
+      padding: 0 42px 32px;
+      color: #96a590;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 920px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(121,255,43,0.10);
+      }
+
+      .hero-left, .hero-right, .sections, .footer {
+        padding-left: 26px;
+        padding-right: 26px;
+      }
+
+      .hero-left, .hero-right {
+        padding-top: 28px;
+        padding-bottom: 28px;
+      }
+
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        width: min(100%, 280px);
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <div class="card">
-    <h2>🎮 Partenaire officiel</h2>
-    <p>Jeux moins chers • Soutiens le stream</p>
-    <div class="ig-banner"></div>
-  </div>
+  <main class="page">
+    <div class="glow"></div>
+
+    <section class="card">
+      <div class="hero">
+        <div class="hero-left">
+          <div class="badge">O2W • Owned2win • Liens officiels</div>
+          <img class="logo" src="top.png" alt="Logo O2W" />
+
+          <h1>Retrouve <span class="accent">Owned2win</span> partout</h1>
+          <p class="lead">
+            Tous mes liens importants sont centralisés ici : lives, vidéos, communauté et partenaires.
+            Cette page a été pensée pour être simple, rapide et fiable, sans faux bouton ni redirection douteuse.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://www.instant-gaming.com/?igr=gamer-8c5868" target="_blank" rel="noopener noreferrer sponsored">Soutenir via Instant Gaming</a>
+            <a class="btn btn-secondary" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">Voir les lives sur Kick</a>
+          </div>
+
+          <p class="hero-note">Merci pour le soutien. Chaque clic sur les liens partenaires aide directement la chaîne.</p>
+        </div>
+
+        <aside class="hero-right">
+          <div class="panel">
+            <div class="mini-card">
+              <h2>Une page claire et sérieuse</h2>
+              <ul class="checklist">
+                <li><span class="dot"></span><span>Accès direct à tous les liens officiels O2W.</span></li>
+                <li><span class="dot"></span><span>Version légère, mobile-friendly et compatible GitHub Pages.</span></li>
+                <li><span class="dot"></span><span>Liens partenaires mis en avant proprement, sans confusion.</span></li>
+              </ul>
+            </div>
+
+            <div class="mini-card">
+              <h2>Liens centralisés</h2>
+              <p>
+                Tu peux utiliser cette page dans tes descriptions YouTube, Kick, X, Discord ou partout où tu veux partager un accès propre à ton univers.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="sections">
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">👥 Pour me suivre partout</h2>
+              <p class="section-subtitle">Tous les accès à mes contenus, annonces et communauté.</p>
+            </div>
+          </div>
+          <div class="link-grid">
+            <a class="link-card" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
+              <div class="link-top">
+                <h3 class="link-name">Kick</h3>
+                <span class="tag">Live gaming</span>
+              </div>
+              <p class="link-desc">Retrouve-moi en live pour les sessions gaming, les découvertes et les streams en direct.</p>
+              <p class="link-url">https://kick.com/owned2win</p>
+            </a>
+
+            <a class="link-card" href="https://www.youtube.com/@ownedtwin01" target="_blank" rel="noopener noreferrer">
+              <div class="link-top">
+                <h3 class="link-name">YouTube</h3>
+                <span class="tag">Gameplay FR 4K</span>
+              </div>
+              <p class="link-desc">Gameplay FR, vidéos 4K et Shorts pour suivre les meilleurs moments de la chaîne.</p>
+              <p class="link-url">https://www.youtube.com/@ownedtwin01</p>
+            </a>
+
+            <a class="link-card" href="https://x.com/Ownedtwin01" target="_blank" rel="noopener noreferrer">
+              <div class="link-top">
+                <h3 class="link-name">Twitter / X</h3>
+                <span class="tag">Actus & annonces</span>
+              </div>
+              <p class="link-desc">Clips, actus, extraits rapides et annonces importantes autour de mes contenus.</p>
+              <p class="link-url">https://x.com/Ownedtwin01</p>
+            </a>
+
+            <a class="link-card" href="https://discord.gg/a7359pDRe4" target="_blank" rel="noopener noreferrer">
+              <div class="link-top">
+                <h3 class="link-name">Discord</h3>
+                <span class="tag">Communauté</span>
+              </div>
+              <p class="link-desc">Rejoins la communauté pour échanger, suivre les annonces et discuter gaming.</p>
+              <p class="link-url">https://discord.gg/a7359pDRe4</p>
+            </a>
+
+            <a class="link-card" href="https://www.reddit.com/r/Owned2WinGamingClips/" target="_blank" rel="noopener noreferrer">
+              <div class="link-top">
+                <h3 class="link-name">Reddit</h3>
+                <span class="tag">Clips exclusifs</span>
+              </div>
+              <p class="link-desc">Découvre les clips exclusifs et les publications de la communauté gaming O2W.</p>
+              <p class="link-url">https://www.reddit.com/r/Owned2WinGamingClips/</p>
+            </a>
+
+            <a class="link-card" href="https://linktr.ee/owned2win" target="_blank" rel="noopener noreferrer">
+              <div class="link-top">
+                <h3 class="link-name">Linktree</h3>
+                <span class="tag">Tous mes liens</span>
+              </div>
+              <p class="link-desc">Version alternative centralisée pour retrouver rapidement tous mes accès et mes réseaux.</p>
+              <p class="link-url">https://linktr.ee/owned2win</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">🔥 Soutenir la chaîne</h2>
+              <p class="section-subtitle">Partenaires et soutien direct.</p>
+            </div>
+          </div>
+          <div class="link-grid">
+            <a class="link-card" href="https://kickbot.com/tips/Owned2win" target="_blank" rel="noopener noreferrer">
+              <div class="link-top">
+                <h3 class="link-name">Tips & pourboires</h3>
+                <span class="tag">Soutien direct</span>
+              </div>
+              <p class="link-desc">Pour soutenir directement la chaîne avec un tip ou un pourboire.</p>
+              <p class="link-url">https://kickbot.com/tips/Owned2win</p>
+            </a>
+
+            <a class="link-card" href="https://www.instant-gaming.com/?igr=gamer-8c5868" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="link-top">
+                <h3 class="link-name">Instant Gaming</h3>
+                <span class="tag">Jusqu’à -70 %</span>
+              </div>
+              <p class="link-desc">Achète tes jeux PC et consoles à prix réduit tout en soutenant la chaîne via mon lien partenaire.</p>
+              <p class="link-url">https://www.instant-gaming.com/?igr=gamer-8c5868</p>
+            </a>
+
+            <a class="link-card" href="https://www.own3d.tv/en/?deal=ownedtwin35" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="link-top">
+                <h3 class="link-name">Own3d.tv</h3>
+                <span class="tag">Overlays & packs</span>
+              </div>
+              <p class="link-desc">Overlays, packs streamers et éléments visuels pour améliorer ton setup de stream.</p>
+              <p class="link-url">https://www.own3d.tv/en/?deal=ownedtwin35</p>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="footer">
+        Page officielle O2W. Tous les liens présents ici ont été ajoutés volontairement pour offrir un accès simple, propre et fiable à mes contenus et partenaires.
+      </div>
+    </section>
+  </main>
 </body>
 </html>
