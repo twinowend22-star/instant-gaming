@@ -485,6 +485,17 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    .footer a {
+      color: #d9ffd0;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(121,255,43,0.18);
+    }
+
+     .footer a:hover {
+       color: #79ff2b;
+       border-bottom-color: rgba(121,255,43,0.45);
+     }
       
   </style>
 </head>
@@ -636,12 +647,20 @@
       </div>
 
       <div class="footer">
-        © <span id="year"></span> Owned2Win (O2W) — Tous droits réservés.
+        © <span id="year"></span> Owned2Win (O2W) — Tous droits réservés.<br>
+        <span id="business-contact"></span>
       </div>
     </section>
   </main>
   <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const user = "business";
+const domain = "owned2win.com";
+const email = user + "@" + domain;
+
+document.getElementById("business-contact").innerHTML =
+  'Contact & partenariats : <a href="mailto:' + email + '">' + email + '</a>';
 </script>
 </body>
 </html>
