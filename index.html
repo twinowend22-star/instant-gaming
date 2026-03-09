@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
   <meta name="theme-color" content="#79ff2b">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Owned2Win | Gaming, Streaming & Tous mes liens officiels</title>
 
-<meta name="description" content="Tous les liens officiels Owned2Win : Kick, YouTube, X, Discord, Reddit, Tips, Instant Gaming et partenaires gaming.">
+  <title>Owned2Win | Gaming, Streaming & Tous mes liens officiels</title>
 
-<meta name="keywords" content="Owned2Win, O2W, gaming, streamer, kick, youtube gaming, streaming, gaming links">
+  <meta name="description" content="Tous les liens officiels Owned2Win : Kick, YouTube, X, Discord, Reddit, Tips, Instant Gaming et partenaires gaming.">
+  <meta name="keywords" content="Owned2Win, O2W, gaming, streamer, kick, youtube gaming, streaming, gaming links">
+  <meta name="author" content="Owned2Win">
 
-<meta name="author" content="Owned2Win">
+  <meta property="og:title" content="Owned2Win | Tous mes liens officiels">
+  <meta property="og:description" content="Retrouvez tous les liens officiels Owned2Win : Kick, YouTube, X, Discord et partenaires.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://owned2win.com">
 
-<meta property="og:title" content="Owned2Win | Tous mes liens officiels">
-<meta property="og:description" content="Retrouvez tous les liens officiels Owned2Win : Kick, YouTube, X, Discord et partenaires.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://owned2win.com">
+  <meta name="robots" content="index, follow">
 
-<meta name="robots" content="index, follow">
   <style>
     :root {
       --bg: #040404;
@@ -35,7 +35,9 @@
       --radius: 26px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html, body {
       margin: 0;
@@ -91,6 +93,24 @@
       pointer-events: none;
     }
 
+    .top-banner-box {
+      margin: 32px 42px 18px 42px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner {
+      width: 100%;
+      aspect-ratio: 4 / 1;
+      border-radius: 22px;
+      background-image: url("banner-o2w2.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid rgba(121,255,43,0.12);
+      box-shadow: 0 12px 28px rgba(64,255,0,0.08);
+    }
+
     .hero {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
@@ -99,7 +119,8 @@
       z-index: 1;
     }
 
-    .hero-left, .hero-right {
+    .hero-left,
+    .hero-right {
       padding: 42px;
     }
 
@@ -168,8 +189,13 @@
       z-index: 5;
     }
 
-    .btn:hover { transform: translateY(-2px); }
-    .btn:active { transform: translateY(0); }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
 
     .btn-primary {
       background: linear-gradient(180deg, var(--green), var(--green-2));
@@ -357,50 +383,6 @@
       font-size: 13px;
       line-height: 1.6;
     }
-	
-    .top-banner-box {
-      margin: 32px 42px 18px 42px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .banner {
-      width: 100%;
-      aspect-ratio: 4 / 1;
-      border-radius: 22px;
-      background-image: url("banner-o2w2.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      border: 1px solid rgba(121,255,43,0.12);
-      box-shadow: 0 12px 28px rgba(64,255,0,0.08);
-    }
-	
-    @media (max-width: 920px) {
-      .hero {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-left {
-      border-right: none;
-      border-bottom: 1px solid rgba(121,255,43,0.10);
-    }
-
-    .hero-left, .hero-right, .sections, .footer {
-      padding-left: 26px;
-      padding-right: 26px;
-    }
-
-    .hero-left, .hero-right {
-      padding-top: 28px;
-      padding-bottom: 28px;
-    }
-
-    .link-grid {
-      grid-template-columns: 1fr;
-    }
-	
-    /* tes autres styles */
 
     .logo {
       width: 180px;
@@ -413,50 +395,85 @@
       0% {
         transform: scale(1);
         filter: drop-shadow(0 0 6px rgba(121,255,43,0.20));
+      }
+
+      100% {
+        transform: scale(1.03);
+        filter: drop-shadow(0 0 18px rgba(121,255,43,0.45));
+      }
     }
 
-  100% {
-    transform: scale(1.03);
-    filter: drop-shadow(0 0 18px rgba(121,255,43,0.45));
-    } 
-	
-	.monthly-stream{
-      margin-top:15px;
-      border-radius:18px;
-      overflow:hidden;
-      border:1px solid rgba(121,255,43,0.15);
-      box-shadow:0 0 30px rgba(121,255,43,0.15);
+    .monthly-stream {
+      margin-top: 15px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(121,255,43,0.15);
+      box-shadow: 0 0 30px rgba(121,255,43,0.15);
     }
 
-    .monthly-stream img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:18px;
-      transition:0.4s;
+    .monthly-stream img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      transition: 0.4s;
     }
 
-    .monthly-stream img:hover{
-      transform:scale(1.02);
-      box-shadow:0 0 25px rgba(121,255,43,0.25);
+    .monthly-stream img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px rgba(121,255,43,0.25);
     }
-}
+
+    @media (max-width: 920px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(121,255,43,0.10);
+      }
+
+      .hero-left,
+      .hero-right,
+      .sections,
+      .footer {
+        padding-left: 26px;
+        padding-right: 26px;
+      }
+
+      .hero-left,
+      .hero-right {
+        padding-top: 28px;
+        padding-bottom: 28px;
+      }
+
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .top-banner-box {
+        margin: 24px 24px 16px 24px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <main class="page">
     <div class="glow"></div>
 
-  <section class="card">
-    <div class="top-banner-box">
-      <div class="banner"></div>
-    </div>
+    <section class="card">
+      <div class="top-banner-box">
+        <div class="banner"></div>
+      </div>
 
-    <div class="hero">
-      <div class="hero-left">
-        <div class="badge">O2W • Owned2win • Liens officiels</div>
+      <div class="hero">
+        <div class="hero-left">
+          <div class="badge">O2W • Owned2win • Liens officiels</div>
 
           <h1>Retrouve <span class="accent">Owned2win</span> partout</h1>
+
           <p class="lead">
             Tous mes liens importants sont centralisés ici : lives, vidéos, communauté et partenaires.
             Cette page a été pensée pour être simple, rapide et fiable, sans faux bouton ni redirection douteuse.
@@ -487,23 +504,18 @@
                 Tu peux utiliser cette page dans tes descriptions YouTube, Kick, X, Discord ou partout où tu veux partager un accès propre à ton univers.
               </p>
             </div>
+
+            <div class="mini-card">
+              <h2>🎮 En stream ce mois-ci sur Kick</h2>
+              <div class="monthly-stream">
+                <img src="streaming-current.jpg" alt="Streaming du mois sur Kick - Owned2Win">
+              </div>
+            </div>
           </div>
         </aside>
-       </div>
-	  
-       <!-- STREAMING DU MOIS -->
-       <div class="card">
-          
-		  <h2>🎮 En stream ce mois-ci sur Kick</h2>
+      </div>
 
-          <div class="monthly-stream">
-             <img src="streaming-current.png" 
-			      alt="Streaming du mois sur Kick - Owned2Win">
-          </div>
-	   
-	   </div>
-	   
-       <div class="sections">
+      <div class="sections">
         <section class="section">
           <div class="section-head">
             <div>
@@ -511,6 +523,7 @@
               <p class="section-subtitle">Tous les accès à mes contenus, annonces et communauté.</p>
             </div>
           </div>
+
           <div class="link-grid">
             <a class="link-card" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
               <div class="link-top">
@@ -575,6 +588,7 @@
               <p class="section-subtitle">Partenaires et soutien direct.</p>
             </div>
           </div>
+
           <div class="link-grid">
             <a class="link-card" href="https://kickbot.com/tips/Owned2win" target="_blank" rel="noopener noreferrer">
               <div class="link-top">
