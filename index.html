@@ -458,7 +458,13 @@
       .top-banner-box {
         margin: 24px 24px 16px 24px;
       }
-    }
+
+      .footer {
+        text-align: center;
+        opacity: 0.8;
+        letter-spacing: 0.5px;
+      }
+      
   </style>
 </head>
 
@@ -609,9 +615,12 @@
       </div>
 
       <div class="footer">
-        © <span id="year"></span> Owned2Win (O2W) — Tous droits réservés. Hub officiel regroupant mes contenus, mes réseaux et mes partenaires.
+        © <span id="year"></span> Owned2Win (O2W) — Tous droits réservés.
       </div>
     </section>
   </main>
+  <script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
