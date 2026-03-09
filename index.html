@@ -399,10 +399,46 @@
     .link-grid {
       grid-template-columns: 1fr;
     }
+	
+    /* tes autres styles */
 
     .logo {
       width: 180px;
       height: auto;
+      display: block;
+      animation: logoGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes logoGlow {
+      0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px rgba(121,255,43,0.20));
+    }
+
+  100% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 18px rgba(121,255,43,0.45));
+    } 
+	
+	.monthly-stream{
+      margin-top:15px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(121,255,43,0.15);
+      box-shadow:0 0 30px rgba(121,255,43,0.15);
+    }
+
+    .monthly-stream img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:18px;
+      transition:0.4s;
+    }
+
+    .monthly-stream img:hover{
+      transform:scale(1.02);
+      box-shadow:0 0 25px rgba(121,255,43,0.25);
     }
 }
   </style>
@@ -453,9 +489,21 @@
             </div>
           </div>
         </aside>
-      </div>
+       </div>
+	  
+       <!-- STREAMING DU MOIS -->
+       <div class="card">
+          
+		  <h2>🎮 En stream ce mois-ci sur Kick</h2>
 
-      <div class="sections">
+          <div class="monthly-stream">
+             <img src="streaming-current.png" 
+			      alt="Streaming du mois sur Kick - Owned2Win">
+          </div>
+	   
+	   </div>
+	   
+       <div class="sections">
         <section class="section">
           <div class="section-head">
             <div>
