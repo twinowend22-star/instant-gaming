@@ -505,6 +505,38 @@
      .monthly-stream a:hover {
        cursor: pointer;
      }
+	 
+	 .stream-link {
+       position: relative;
+       display: block;
+       text-decoration: none;
+     }
+
+     .stream-badge {
+       position: absolute;
+       right: 14px;
+       bottom: 14px;
+       z-index: 3;
+       padding: 8px 12px;
+       border-radius: 999px;
+       background: rgba(8, 12, 8, 0.88);
+       border: 1px solid rgba(121,255,43,0.22);
+       color: #e8ffe0;
+       font-size: 12px;
+       font-weight: 700;
+       letter-spacing: 0.02em;
+       box-shadow: 0 0 18px rgba(121,255,43,0.12);
+       opacity: 0;
+       transform: translateY(6px);
+       transition: opacity 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+       pointer-events: none;
+     }
+
+     .stream-link:hover .stream-badge {
+       opacity: 1;
+       transform: translateY(0);
+       border-color: rgba(121,255,43,0.4);
+     }
       
   </style>
 </head>
@@ -547,9 +579,10 @@
                     href="https://www.instant-gaming.com/?igr=gamer-8c5868"
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    title="Voir les offres Instant Gaming et soutenir la chaîne"
-                    aria-label="Voir les offres Instant Gaming et soutenir la chaîne"
+                    aria-label="Découvrir les offres Instant Gaming et soutenir la chaîne"
+                    class="stream-link"
                   >
+                    <span class="stream-badge">Offres Instant Gaming ↗</span>
                     <img src="streaming-current.png" alt="Streaming du mois sur Kick - Owned2Win">
                   </a>
               </div>
