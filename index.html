@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Icône du site dans l'onglet du navigateur -->
   <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Couleur du thème pour certains navigateurs mobiles -->
   <meta name="theme-color" content="#79ff2b">
+
+  <!-- Encodage des caractères -->
   <meta charset="UTF-8" />
+
+  <!-- Rend le site responsive sur mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Titre affiché dans l'onglet du navigateur -->
   <title>Owned2Win | Gaming, Streaming & Tous mes liens officiels</title>
 
+  <!-- Description SEO -->
   <meta name="description" content="Tous les liens officiels Owned2Win : Kick, YouTube, X, Discord, Reddit, Tips, Instant Gaming et partenaires gaming.">
+
+  <!-- Mots-clés SEO -->
   <meta name="keywords" content="Owned2Win, O2W, gaming, streamer, kick, youtube gaming, streaming, gaming links">
+
+  <!-- Auteur du site -->
   <meta name="author" content="Owned2Win">
 
+  <!-- Balises Open Graph pour l’aperçu quand on partage le site -->
   <meta property="og:title" content="Owned2Win | Tous mes liens officiels">
   <meta property="og:description" content="Retrouvez tous les liens officiels Owned2Win : Kick, YouTube, X, Discord et partenaires.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://owned2win.com">
 
+  <!-- Autorise l’indexation par les moteurs de recherche -->
   <meta name="robots" content="index, follow">
 
   <style>
+    /* =========================
+       VARIABLES GLOBALES
+       Sert à centraliser les couleurs et valeurs principales
+       ========================= */
     :root {
       --bg: #040404;
       --bg-soft: #0a0a0a;
@@ -35,10 +54,15 @@
       --radius: 26px;
     }
 
+    /* Applique box-sizing partout pour faciliter les tailles */
     * {
       box-sizing: border-box;
     }
 
+    /* =========================
+       BASE HTML / BODY
+       Gère le fond général, la police, les marges
+       ========================= */
     html, body {
       margin: 0;
       padding: 0;
@@ -57,6 +81,7 @@
       padding: 28px;
     }
 
+    /* Conteneur principal centré */
     .page {
       width: 100%;
       max-width: 1120px;
@@ -64,6 +89,7 @@
       position: relative;
     }
 
+    /* Halo lumineux autour de la page */
     .glow {
       position: absolute;
       inset: -30px;
@@ -75,6 +101,7 @@
       z-index: 0;
     }
 
+    /* Carte principale qui contient le site */
     .card {
       position: relative;
       z-index: 1;
@@ -85,6 +112,7 @@
       overflow: hidden;
     }
 
+    /* Effet décoratif léger sur la carte */
     .card::before {
       content: "";
       position: absolute;
@@ -93,6 +121,9 @@
       pointer-events: none;
     }
 
+    /* =========================
+       BANNIÈRE DU HAUT
+       ========================= */
     .top-banner-box {
       margin: 32px 42px 18px 42px;
       position: relative;
@@ -111,6 +142,10 @@
       box-shadow: 0 12px 28px rgba(64,255,0,0.08);
     }
 
+    /* =========================
+       HERO = PARTIE DU HAUT
+       Colonne gauche + colonne droite
+       ========================= */
     .hero {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
@@ -128,6 +163,7 @@
       border-right: 1px solid rgba(121,255,43,0.10);
     }
 
+    /* Petit badge du haut */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -143,6 +179,7 @@
       letter-spacing: 0.06em;
     }
 
+    /* Titre principal */
     h1 {
       margin: 0 0 16px;
       font-size: clamp(32px, 4.2vw, 52px);
@@ -150,6 +187,26 @@
       letter-spacing: -0.02em;
     }
 
+    /* Mot mis en valeur dans le titre */
+    .accent {
+      background: linear-gradient(90deg, #79ff2b, #b6ff7a, #79ff2b);
+      background-size: 200% 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 12px rgba(121,255,43,0.25);
+      animation: accentGlow 6s ease infinite;
+    }
+
+    /* Animation du mot mis en valeur */
+    @keyframes accentGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Texte descriptif sous le titre */
     .lead {
       margin: 0 0 28px;
       max-width: 60ch;
@@ -158,6 +215,7 @@
       font-size: 18px;
     }
 
+    /* Zone contenant les boutons */
     .hero-actions {
       display: flex;
       gap: 14px;
@@ -165,6 +223,7 @@
       margin-bottom: 14px;
     }
 
+    /* Style général des boutons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -194,12 +253,14 @@
       transform: translateY(0);
     }
 
+    /* Bouton principal vert */
     .btn-primary {
       background: linear-gradient(180deg, #7dff2f 0%, #59df1d 100%);
       color: #041600;
       box-shadow: 0 12px 30px rgba(79,255,8,0.22);
     }
 
+    /* Bouton secondaire sombre */
     .btn-secondary {
       background: rgba(255,255,255,0.03);
       color: var(--text);
@@ -207,12 +268,16 @@
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
     }
 
+    /* Petite note sous les boutons */
     .hero-note {
       font-size: 14px;
       color: #cce9c3;
       margin: 0;
     }
 
+    /* =========================
+       PANNEAU DE DROITE
+       ========================= */
     .panel {
       height: 100%;
       display: grid;
@@ -239,31 +304,72 @@
       line-height: 1.6;
     }
 
-    .checklist {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 12px;
+    /* =========================
+       BLOC IMAGE STREAMING
+       ========================= */
+    .monthly-stream {
+      margin-top: 15px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(121,255,43,0.15);
+      box-shadow: 0 0 30px rgba(121,255,43,0.15);
     }
 
-    .checklist li {
-      display: flex;
-      gap: 10px;
-      color: var(--muted);
-      line-height: 1.5;
+    .monthly-stream img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
+      transition: 0.4s;
     }
 
-    .dot {
-      width: 10px;
-      height: 10px;
+    /* Lien qui rend l'image cliquable */
+    .stream-link {
+      position: relative;
+      display: block;
+      text-decoration: none;
+    }
+
+    .stream-link:hover {
+      cursor: pointer;
+    }
+
+    /* Zoom léger au survol */
+    .stream-link:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 0 35px rgba(121,255,43,0.45);
+    }
+
+    /* Petit badge qui apparaît au survol */
+    .stream-badge {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      z-index: 3;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: var(--green);
-      box-shadow: 0 0 14px rgba(121,255,43,0.45);
-      margin-top: 8px;
-      flex: 0 0 10px;
+      background: rgba(8, 12, 8, 0.88);
+      border: 1px solid rgba(121,255,43,0.22);
+      color: #e8ffe0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      box-shadow: 0 0 18px rgba(121,255,43,0.12);
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+      pointer-events: none;
     }
 
+    .stream-link:hover .stream-badge {
+      opacity: 1;
+      transform: translateY(0);
+      border-color: rgba(121,255,43,0.4);
+    }
+
+    /* =========================
+       SECTIONS DU BAS
+       ========================= */
     .sections {
       position: relative;
       z-index: 1;
@@ -301,6 +407,7 @@
       font-size: 14px;
     }
 
+    /* Grille des cartes de liens */
     .link-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -308,6 +415,7 @@
       padding: 22px;
     }
 
+    /* Carte individuelle de lien */
     .link-card {
       display: block;
       text-decoration: none;
@@ -373,56 +481,39 @@
       opacity: 0.92;
     }
 
+    /* =========================
+       FOOTER
+       ========================= */
     .footer {
       position: relative;
       z-index: 1;
-      padding: 0 42px 32px;
+      padding: 28px 42px 32px;
       color: #96a590;
       font-size: 13px;
       line-height: 1.6;
+      text-align: center;
+      opacity: 0.8;
+      letter-spacing: 0.5px;
+      border-top: 1px solid rgba(121,255,43,0.08);
+      margin-top: 28px;
     }
 
-    .logo {
-      width: 180px;
-      height: auto;
-      display: block;
-      animation: logoGlow 3s ease-in-out infinite alternate;
+    .footer a {
+      color: #d9ffd0;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(121,255,43,0.18);
     }
 
-    @keyframes logoGlow {
-      0% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 6px rgba(121,255,43,0.20));
-      }
-
-      100% {
-        transform: scale(1.03);
-        filter: drop-shadow(0 0 18px rgba(121,255,43,0.45));
-      }
+    .footer a:hover {
+      color: #79ff2b;
+      border-bottom-color: rgba(121,255,43,0.45);
     }
 
-    .monthly-stream {
-      margin-top: 15px;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(121,255,43,0.15);
-      box-shadow: 0 0 30px rgba(121,255,43,0.15);
-    }
-
-    .monthly-stream img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 18px;
-      transition: 0.4s;
-    }
-
-    .monthly-stream img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 35px rgba(121,255,43,0.45);
-    }
-
-       @media (max-width: 920px) {
+    /* =========================
+       RESPONSIVE MOBILE
+       Adapte l'affichage sur petits écrans
+       ========================= */
+    @media (max-width: 920px) {
       .hero {
         grid-template-columns: 1fr;
       }
@@ -454,103 +545,23 @@
         margin: 24px 24px 16px 24px;
       }
     }
-
-    .footer {
-      position: relative;
-      z-index: 1;
-      padding: 28px 42px 32px;
-      color: #96a590;
-      font-size: 13px;
-      line-height: 1.6;
-      text-align: center;
-      opacity: 0.8;
-      letter-spacing: 0.5px;
-      border-top: 1px solid rgba(121,255,43,0.08);
-      margin-top: 28px;
-    }
-
-    .accent {
-      background: linear-gradient(90deg, #79ff2b, #b6ff7a, #79ff2b);
-      background-size: 200% 200%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 12px rgba(121,255,43,0.25);
-      animation: accentGlow 6s ease infinite;
-    }
-
-    @keyframes accentGlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .footer a {
-      color: #d9ffd0;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(121,255,43,0.18);
-    }
-
-     .footer a:hover {
-       color: #79ff2b;
-       border-bottom-color: rgba(121,255,43,0.45);
-     }
-	 
-	 .monthly-stream a {
-       display: block;
-       text-decoration: none;
-     }
-
-     .monthly-stream a:hover {
-       cursor: pointer;
-     }
-	 
-	 .stream-link {
-       position: relative;
-       display: block;
-       text-decoration: none;
-     }
-
-     .stream-badge {
-       position: absolute;
-       right: 14px;
-       bottom: 14px;
-       z-index: 3;
-       padding: 8px 12px;
-       border-radius: 999px;
-       background: rgba(8, 12, 8, 0.88);
-       border: 1px solid rgba(121,255,43,0.22);
-       color: #e8ffe0;
-       font-size: 12px;
-       font-weight: 700;
-       letter-spacing: 0.02em;
-       box-shadow: 0 0 18px rgba(121,255,43,0.12);
-       opacity: 0;
-       transform: translateY(6px);
-       transition: opacity 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
-       pointer-events: none;
-     }
-
-     .stream-link:hover .stream-badge {
-       opacity: 1;
-       transform: translateY(0);
-       border-color: rgba(121,255,43,0.4);
-     }
-      
   </style>
 </head>
 
 <body>
   <main class="page">
+    <!-- Halo décoratif -->
     <div class="glow"></div>
 
     <section class="card">
+      <!-- Bannière du haut -->
       <div class="top-banner-box">
         <div class="banner"></div>
       </div>
 
+      <!-- Bloc principal haut -->
       <div class="hero">
+        <!-- Colonne gauche -->
         <div class="hero-left">
           <div class="badge">O2W • Owned2win • Liens officiels</div>
 
@@ -562,36 +573,49 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://kickbot.com/tips/Owned2win" target="_blank" rel="noopener noreferrer sponsored">Tips & pourboires</a>
-            <a class="btn btn-secondary" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">Me retrouver en live sur Kick</a>
+            <!-- Bouton tips -->
+            <a class="btn btn-primary" href="https://kickbot.com/tips/Owned2win" target="_blank" rel="noopener noreferrer sponsored">
+              Tips & pourboires
+            </a>
+
+            <!-- Bouton Kick -->
+            <a class="btn btn-secondary" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
+              Me retrouver en live sur Kick
+            </a>
           </div>
 
-          <p class="hero-note">Merci pour le soutien. Chaque clic sur les liens partenaires aide directement la chaîne.</p>
+          <p class="hero-note">
+            Merci pour le soutien. Chaque clic sur les liens partenaires aide directement la chaîne.
+          </p>
         </div>
 
+        <!-- Colonne droite -->
         <aside class="hero-right">
           <div class="panel">
-
             <div class="mini-card">
               <h2>🎮 En stream ce mois-ci sur Kick</h2>
+
               <div class="monthly-stream">
-                  <a
-                    href="https://www.instant-gaming.com/?igr=gamer-8c5868"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    aria-label="Découvrir les offres Instant Gaming et soutenir la chaîne"
-                    class="stream-link"
-                  >
-                    <span class="stream-badge">Offres Instant Gaming ↗</span>
-                    <img src="streaming-current.png" alt="Streaming du mois sur Kick - Owned2Win">
-                  </a>
+                <!-- Image cliquable vers Instant Gaming -->
+                <a
+                  href="https://www.instant-gaming.com/?igr=gamer-8c5868"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  aria-label="Découvrir les offres Instant Gaming et soutenir la chaîne"
+                  class="stream-link"
+                >
+                  <span class="stream-badge">Offres Instant Gaming ↗</span>
+                  <img src="streaming-current.png" alt="Streaming du mois sur Kick - Owned2Win">
+                </a>
               </div>
             </div>
           </div>
         </aside>
       </div>
 
+      <!-- Sections du bas -->
       <div class="sections">
+        <!-- Section réseaux -->
         <section class="section">
           <div class="section-head">
             <div>
@@ -657,6 +681,7 @@
           </div>
         </section>
 
+        <!-- Section soutien -->
         <section class="section">
           <div class="section-head">
             <div>
@@ -696,21 +721,27 @@
         </section>
       </div>
 
+      <!-- Footer du site -->
       <div class="footer">
         © <span id="year"></span> Owned2Win (O2W) — Tous droits réservés.<br>
         <span id="business-contact"></span>
       </div>
     </section>
   </main>
+
   <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+    /* Met automatiquement l'année actuelle dans le footer */
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-const user = "business";
-const domain = "owned2win.com";
-const email = user + "@" + domain;
+    /* Construit l'adresse email en JavaScript
+       pour éviter de l'écrire en clair dans le HTML */
+    const user = "business";
+    const domain = "owned2win.com";
+    const email = user + "@" + domain;
 
-document.getElementById("business-contact").innerHTML =
-  'Contact & partenariats : <a href="mailto:' + email + '">' + email + '</a>';
-</script>
+    /* Affiche le contact dans le footer */
+    document.getElementById("business-contact").innerHTML =
+      'Contact & partenariats : <a href="mailto:' + email + '">' + email + '</a>';
+  </script>
 </body>
 </html>
