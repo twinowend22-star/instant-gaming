@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Icône du site dans l'onglet du navigateur -->
+  <!-- Icône affichée dans l’onglet du navigateur -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Couleur du thème pour certains navigateurs mobiles -->
+  <!-- Couleur du thème sur mobile / navigateurs compatibles -->
   <meta name="theme-color" content="#79ff2b">
 
-  <!-- Encodage des caractères -->
+  <!-- Encodage du texte -->
   <meta charset="UTF-8" />
 
-  <!-- Rend le site responsive sur mobile -->
+  <!-- Responsive mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Titre affiché dans l'onglet du navigateur -->
+  <!-- Titre du site -->
   <title>Owned2Win | Gaming, Streaming & Tous mes liens officiels</title>
 
-  <!-- Description SEO -->
+  <!-- SEO -->
   <meta name="description" content="Tous les liens officiels Owned2Win : Kick, YouTube, X, Discord, Reddit, Tips, Instant Gaming et partenaires gaming.">
-
-  <!-- Mots-clés SEO -->
   <meta name="keywords" content="Owned2Win, O2W, gaming, streamer, kick, youtube gaming, streaming, gaming links">
-
-  <!-- Auteur du site -->
   <meta name="author" content="Owned2Win">
 
-  <!-- Balises Open Graph pour l’aperçu quand on partage le site -->
+  <!-- Aperçu lors du partage -->
   <meta property="og:title" content="Owned2Win | Tous mes liens officiels">
   <meta property="og:description" content="Retrouvez tous les liens officiels Owned2Win : Kick, YouTube, X, Discord et partenaires.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://owned2win.com">
 
-  <!-- Autorise l’indexation par les moteurs de recherche -->
+  <!-- Autorise l’indexation -->
   <meta name="robots" content="index, follow">
 
   <style>
     /* =========================
        VARIABLES GLOBALES
-       Sert à centraliser les couleurs et valeurs principales
        ========================= */
     :root {
       --bg: #040404;
@@ -54,14 +49,12 @@
       --radius: 26px;
     }
 
-    /* Applique box-sizing partout pour faciliter les tailles */
     * {
       box-sizing: border-box;
     }
 
     /* =========================
-       BASE HTML / BODY
-       Gère le fond général, la police, les marges
+       BASE GLOBALE
        ========================= */
     html, body {
       margin: 0;
@@ -89,7 +82,7 @@
       position: relative;
     }
 
-    /* Halo lumineux autour de la page */
+    /* Halo lumineux décoratif */
     .glow {
       position: absolute;
       inset: -30px;
@@ -101,7 +94,7 @@
       z-index: 0;
     }
 
-    /* Carte principale qui contient le site */
+    /* Grande carte principale */
     .card {
       position: relative;
       z-index: 1;
@@ -112,7 +105,7 @@
       overflow: hidden;
     }
 
-    /* Effet décoratif léger sur la carte */
+    /* Effet décoratif léger */
     .card::before {
       content: "";
       position: absolute;
@@ -143,8 +136,7 @@
     }
 
     /* =========================
-       HERO = PARTIE DU HAUT
-       Colonne gauche + colonne droite
+       HERO = BLOC PRINCIPAL DU HAUT
        ========================= */
     .hero {
       display: grid;
@@ -163,7 +155,7 @@
       border-right: 1px solid rgba(121,255,43,0.10);
     }
 
-    /* Petit badge du haut */
+    /* Badge du haut */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -187,7 +179,7 @@
       letter-spacing: -0.02em;
     }
 
-    /* Mot mis en valeur dans le titre */
+    /* Mot mis en valeur */
     .accent {
       background: linear-gradient(90deg, #79ff2b, #b6ff7a, #79ff2b);
       background-size: 200% 200%;
@@ -199,14 +191,13 @@
       animation: accentGlow 6s ease infinite;
     }
 
-    /* Animation du mot mis en valeur */
     @keyframes accentGlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Texte descriptif sous le titre */
+    /* Texte sous le titre */
     .lead {
       margin: 0 0 28px;
       max-width: 60ch;
@@ -215,7 +206,7 @@
       font-size: 18px;
     }
 
-    /* Zone contenant les boutons */
+    /* Zone des boutons */
     .hero-actions {
       display: flex;
       gap: 14px;
@@ -223,7 +214,7 @@
       margin-bottom: 14px;
     }
 
-    /* Style général des boutons */
+    /* Boutons généraux */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -253,14 +244,12 @@
       transform: translateY(0);
     }
 
-    /* Bouton principal vert */
     .btn-primary {
       background: linear-gradient(180deg, #7dff2f 0%, #59df1d 100%);
       color: #041600;
       box-shadow: 0 12px 30px rgba(79,255,8,0.22);
     }
 
-    /* Bouton secondaire sombre */
     .btn-secondary {
       background: rgba(255,255,255,0.03);
       color: var(--text);
@@ -268,7 +257,6 @@
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
     }
 
-    /* Petite note sous les boutons */
     .hero-note {
       font-size: 14px;
       color: #cce9c3;
@@ -276,7 +264,7 @@
     }
 
     /* =========================
-       PANNEAU DE DROITE
+       COLONNE DROITE
        ========================= */
     .panel {
       height: 100%;
@@ -305,7 +293,7 @@
     }
 
     /* =========================
-       BLOC IMAGE STREAMING
+       IMAGE STREAMING DU MOIS
        ========================= */
     .monthly-stream {
       margin-top: 15px;
@@ -323,7 +311,7 @@
       transition: 0.4s;
     }
 
-    /* Lien qui rend l'image cliquable */
+    /* Rend toute l’image cliquable */
     .stream-link {
       position: relative;
       display: block;
@@ -334,13 +322,13 @@
       cursor: pointer;
     }
 
-    /* Zoom léger au survol */
+    /* Zoom au survol */
     .stream-link:hover img {
       transform: scale(1.09);
       box-shadow: 0 0 40px rgba(121,255,43,0.45);
     }
 
-    /* Petit badge qui apparaît au survol */
+    /* Petit badge visible au survol */
     .stream-badge {
       position: absolute;
       right: 14px;
@@ -368,11 +356,10 @@
     }
 
     /* =========================
-   BLOC PARTENAIRE PREMIUM
-   Sert à mettre en avant Instant Gaming
-   sous l’image du stream du mois
-   ========================= */
-
+       BLOC PARTENAIRE PREMIUM
+       Ce bloc est placé sous le hero,
+       pas dans la colonne de droite
+       ========================= */
     .partner-card {
       padding: 22px;
       border-radius: 22px;
@@ -399,7 +386,6 @@
       pointer-events: none;
     }
 
-/* Petite ligne de titre au-dessus */
     .partner-kicker {
       display: inline-block;
       margin-bottom: 10px;
@@ -411,9 +397,10 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
+      position: relative;
+      z-index: 1;
     }
 
-/* Titre principal du bloc */
     .partner-card h3 {
       position: relative;
       z-index: 1;
@@ -423,7 +410,7 @@
       color: #f4f7f2;
     }
 
-/* Organisation image + texte côte à côte */
+    /* Mise en page image + texte */
     .partner-layout {
       position: relative;
       z-index: 1;
@@ -433,13 +420,11 @@
       align-items: center;
     }
 
-/* Lien sur l’image partenaire */
     .partner-banner-link {
       display: block;
       text-decoration: none;
     }
 
-/* Image partenaire */
     .partner-banner {
       display: block;
       width: 100%;
@@ -455,7 +440,6 @@
       filter: brightness(1.03);
     }
 
-/* Texte descriptif à droite */
     .partner-text {
       margin: 0 0 16px;
       color: var(--muted);
@@ -463,7 +447,6 @@
       font-size: 15px;
     }
 
-/* Bouton principal */
     .partner-btn {
       display: inline-flex;
       align-items: center;
@@ -487,7 +470,6 @@
       filter: brightness(1.03);
     }
 
-/* Petite note en bas */
     .partner-note {
       position: relative;
       z-index: 1;
@@ -499,18 +481,7 @@
       opacity: 0.92;
     }
 
-/* Responsive mobile */
-    @media (max-width: 920px) {
-      .partner-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .partner-banner {
-      max-width: 260px;
-      margin: 0 auto;
-    }
-      
-   /* =========================
+    /* =========================
        SECTIONS DU BAS
        ========================= */
     .sections {
@@ -550,7 +521,7 @@
       font-size: 14px;
     }
 
-    /* Grille des cartes de liens */
+    /* Grille des cartes */
     .link-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -558,7 +529,7 @@
       padding: 22px;
     }
 
-    /* Carte individuelle de lien */
+    /* Carte cliquable */
     .link-card {
       display: block;
       text-decoration: none;
@@ -654,7 +625,8 @@
 
     /* =========================
        RESPONSIVE MOBILE
-       Adapte l'affichage sur petits écrans
+       Tout ce qui suit ne s’applique
+       que sur petits écrans
        ========================= */
     @media (max-width: 920px) {
       .hero {
@@ -687,6 +659,15 @@
       .top-banner-box {
         margin: 24px 24px 16px 24px;
       }
+
+      .partner-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .partner-banner {
+        max-width: 260px;
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
@@ -702,7 +683,7 @@
         <div class="banner"></div>
       </div>
 
-      <!-- Bloc principal haut -->
+      <!-- HERO = haut du site -->
       <div class="hero">
         <!-- Colonne gauche -->
         <div class="hero-left">
@@ -716,12 +697,10 @@
           </p>
 
           <div class="hero-actions">
-            <!-- Bouton tips -->
             <a class="btn btn-primary" href="https://kickbot.com/tips/Owned2win" target="_blank" rel="noopener noreferrer sponsored">
               Tips & pourboires
             </a>
 
-            <!-- Bouton Kick -->
             <a class="btn btn-secondary" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
               Me retrouver en live sur Kick
             </a>
@@ -733,74 +712,87 @@
         </div>
 
         <!-- Colonne droite -->
-<aside class="hero-right">
-  <div class="panel">
+        <aside class="hero-right">
+          <div class="panel">
 
-    <div class="mini-card">
-      <h2>🎮 En stream ce mois-ci sur Kick</h2>
+            <div class="mini-card">
+              <h2>🎮 En stream ce mois-ci sur Kick</h2>
 
-      <div class="monthly-stream">
-        <a
-          href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          aria-label="Découvrir les offres Instant Gaming et soutenir la chaîne"
-          class="stream-link"
-        >
-          <span class="stream-badge">Offres Instant Gaming ↗</span>
-          <img src="streaming-current.png" alt="Streaming du mois sur Kick - Owned2Win">
-        </a>
-      </div>
-    </div>
+              <div class="monthly-stream">
+                <a
+                  href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  aria-label="Découvrir les offres Instant Gaming et soutenir la chaîne"
+                  class="stream-link"
+                >
+                  <span class="stream-badge">Offres Instant Gaming ↗</span>
+                  <img src="streaming-current.png" alt="Streaming du mois sur Kick - Owned2Win">
+                </a>
+              </div>
+            </div>
 
-    <div class="partner-card">
-      <span class="partner-kicker">Partenaire gaming officiel</span>
-      <h3>🔥 Acheter les jeux du stream à prix réduit</h3>
-
-      <div class="partner-layout">
-        <a
-          href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          class="partner-banner-link"
-          aria-label="Voir les offres Instant Gaming"
-        >
-          <img
-            src="instant-gaming-pc-fr.png"
-            alt="Acheter vos jeux PC sur Instant Gaming"
-            class="partner-banner"
-          >
-        </a>
-
-        <div>
-          <p class="partner-text">
-            Si un des jeux présentés dans les streams du mois t’intéresse,
-            tu peux le retrouver sur Instant Gaming via mon lien partenaire.
-            Chaque achat soutient directement la chaîne.
-          </p>
-
-          <a
-            href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            class="partner-btn"
-          >
-            Voir les offres Instant Gaming
-          </a>
-        </div>
+          </div>
+        </aside>
       </div>
 
-      <p class="partner-note">
-        Jeux PC à prix réduit, offres régulières et soutien direct de la chaîne.
-      </p>
-    </div>
-
-  </div>
-</aside>
-      </div>
-
-      <!-- Sections du bas -->
+      <!-- SECTIONS DU BAS -->
       <div class="sections">
+
+        <!-- Bloc partenaire premium Instant Gaming -->
+        <section class="section">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">🔥 Acheter les jeux du stream à prix réduit</h2>
+              <p class="section-subtitle">Partenaire gaming officiel.</p>
+            </div>
+          </div>
+
+          <div class="link-grid" style="grid-template-columns: 1fr;">
+            <div class="partner-card">
+              <span class="partner-kicker">Partenaire gaming officiel</span>
+              <h3>Instant Gaming</h3>
+
+              <div class="partner-layout">
+                <a
+                  href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  class="partner-banner-link"
+                  aria-label="Voir les offres Instant Gaming"
+                >
+                  <img
+                    src="instant-gaming-pc-fr.png"
+                    alt="Acheter vos jeux PC sur Instant Gaming"
+                    class="partner-banner"
+                  >
+                </a>
+
+                <div>
+                  <p class="partner-text">
+                    Si un des jeux présentés dans les streams du mois t’intéresse,
+                    tu peux le retrouver sur Instant Gaming via mon lien partenaire.
+                    Chaque achat soutient directement la chaîne.
+                  </p>
+
+                  <a
+                    href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    class="partner-btn"
+                  >
+                    Voir les offres Instant Gaming
+                  </a>
+                </div>
+              </div>
+
+              <p class="partner-note">
+                Jeux PC à prix réduit, offres régulières et soutien direct de la chaîne.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <!-- Section réseaux -->
         <section class="section">
           <div class="section-head">
@@ -886,13 +878,13 @@
               <p class="link-url">https://kickbot.com/tips/Owned2win</p>
             </a>
 
-            <a class="link-card" href="https://www.instant-gaming.com/?igr=gamer-8c5868" target="_blank" rel="noopener noreferrer sponsored">
+            <a class="link-card" href="https://www.instant-gaming.com/?igr=gamer-8c5d8e" target="_blank" rel="noopener noreferrer sponsored">
               <div class="link-top">
                 <h3 class="link-name">Instant Gaming</h3>
                 <span class="tag">Jusqu’à -70 %</span>
               </div>
               <p class="link-desc">Achète tes jeux PC et consoles à prix réduit tout en soutenant la chaîne via mon lien partenaire.</p>
-              <p class="link-url">https://www.instant-gaming.com/?igr=gamer-8c5868</p>
+              <p class="link-url">https://www.instant-gaming.com/?igr=gamer-8c5d8e</p>
             </a>
 
             <a class="link-card" href="https://www.own3d.tv/en/?deal=ownedtwin35" target="_blank" rel="noopener noreferrer sponsored">
@@ -907,7 +899,7 @@
         </section>
       </div>
 
-      <!-- Footer du site -->
+      <!-- Footer -->
       <div class="footer">
         © <span id="year"></span> Owned2Win (O2W) — Tous droits réservés.<br>
         <span id="business-contact"></span>
@@ -916,16 +908,16 @@
   </main>
 
   <script>
-    /* Met automatiquement l'année actuelle dans le footer */
+    /* Année automatique dans le footer */
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    /* Construit l'adresse email en JavaScript
-       pour éviter de l'écrire en clair dans le HTML */
+    /* Email généré en JavaScript
+       pour ne pas l’écrire en clair dans le HTML */
     const user = "business";
     const domain = "owned2win.com";
     const email = user + "@" + domain;
 
-    /* Affiche le contact dans le footer */
+    /* Affiche l’email dans le footer */
     document.getElementById("business-contact").innerHTML =
       'Contact & partenariats : <a href="mailto:' + email + '">' + email + '</a>';
   </script>
