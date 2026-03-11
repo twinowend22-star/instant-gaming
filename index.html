@@ -368,6 +368,149 @@
     }
 
     /* =========================
+   BLOC PARTENAIRE PREMIUM
+   Sert à mettre en avant Instant Gaming
+   sous l’image du stream du mois
+   ========================= */
+
+    .partner-card {
+      padding: 22px;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(121,255,43,0.06), rgba(121,255,43,0.02)),
+        linear-gradient(180deg, rgba(10,10,10,0.96), rgba(6,6,6,0.98));
+      border: 1px solid rgba(121,255,43,0.12);
+      box-shadow: 0 14px 34px rgba(64,255,0,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .partner-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(121,255,43,0.05),
+        transparent 35%,
+        transparent 70%,
+        rgba(121,255,43,0.04)
+      );
+      pointer-events: none;
+    }
+
+/* Petite ligne de titre au-dessus */
+    .partner-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(121,255,43,0.16);
+      background: rgba(121,255,43,0.06);
+      color: #dcffd2;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+/* Titre principal du bloc */
+    .partner-card h3 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.2;
+      color: #f4f7f2;
+    }
+
+/* Organisation image + texte côte à côte */
+    .partner-layout {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+/* Lien sur l’image partenaire */
+    .partner-banner-link {
+      display: block;
+      text-decoration: none;
+    }
+
+/* Image partenaire */
+    .partner-banner {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(121,255,43,0.10);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    }
+
+    .partner-banner-link:hover .partner-banner {
+      transform: scale(1.04);
+      box-shadow: 0 0 28px rgba(121,255,43,0.22);
+      filter: brightness(1.03);
+    }
+
+/* Texte descriptif à droite */
+    .partner-text {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+/* Bouton principal */
+    .partner-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      width: 100%;
+      padding: 0 18px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #041600;
+      background: linear-gradient(180deg, #7dff2f 0%, #59df1d 100%);
+      box-shadow: 0 10px 24px rgba(79,255,8,0.20);
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .partner-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.03);
+    }
+
+/* Petite note en bas */
+    .partner-note {
+      position: relative;
+      z-index: 1;
+      margin: 16px 0 0;
+      color: #c7d8c1;
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: center;
+      opacity: 0.92;
+    }
+
+/* Responsive mobile */
+    @media (max-width: 920px) {
+      .partner-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-banner {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+      
+   /* =========================
        SECTIONS DU BAS
        ========================= */
     .sections {
@@ -608,7 +751,50 @@
                   <img src="streaming-current.png" alt="Streaming du mois sur Kick - Owned2Win">
                 </a>
               </div>
-            </div>
+    <!-- Bloc partenaire premium Instant Gaming -->
+        <div class="partner-card">
+          <span class="partner-kicker">Partenaire gaming officiel</span>
+          <h3>🔥 Acheter les jeux du stream à prix réduit</h3>
+
+          <div class="partner-layout">
+        <!-- Image officielle Instant Gaming -->
+            <a
+              href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              class="partner-banner-link"
+              aria-label="Voir les offres Instant Gaming"
+            >
+              <img
+                src="instant-gaming-pc-fr.png"
+                alt="Acheter vos jeux PC sur Instant Gaming"
+                class="partner-banner"
+             >
+          </a>
+
+        <!-- Texte à droite -->
+          <div>
+            <p class="partner-text">
+              Si un des jeux présentés dans les streams du mois t’intéresse,
+              tu peux le retrouver sur Instant Gaming via mon lien partenaire.
+              Chaque achat soutient directement la chaîne.
+            </p>
+
+            <a
+              href="https://www.instant-gaming.com/?igr=gamer-8c5d8e"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              class="partner-btn"
+            >
+              Voir les offres Instant Gaming
+            </a>
+          </div>
+        </div>
+
+        <p class="partner-note">
+          Jeux PC à prix réduit, offres régulières et soutien direct de la chaîne.
+        </p>
+      </div>
           </div>
         </aside>
       </div>
