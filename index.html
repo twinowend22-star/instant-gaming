@@ -624,8 +624,21 @@
     MINI CARTES GAMING
     ========================== */
 
+    .gaming-bundle{
+      display:block;
+    }
+
+    .gaming-bundle-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:14px;
+      margin-top:14px;
+      align-items:start;
+    }
+
     .gaming-mini-card{
       display:block;
+      min-width:0;
       background:rgba(255,255,255,0.02);
       border:1px solid rgba(121,255,43,0.12);
       border-radius:14px;
@@ -676,6 +689,12 @@
       transform:scale(1.05);
       box-shadow:0 4px 12px rgba(121,255,43,0.35);
     }
+
+@media (max-width: 920px){
+  .gaming-bundle-grid{
+    grid-template-columns:1fr;
+  }
+}
 
 /* responsive mobile */
 
