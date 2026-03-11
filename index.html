@@ -271,6 +271,23 @@
       box-shadow: 0 10px 24px rgba(64,255,0,0.06);
     }
 
+    /* Animation pulse pour le bouton Kick */
+    @keyframes kickPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(121,255,43,0.35);
+      }
+      70% {
+        box-shadow: 0 0 0 14px rgba(121,255,43,0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(121,255,43,0);
+      }
+    }
+
+    .btn-kick {
+      animation: kickPulse 8s infinite;
+    }
+
     .partner-compact-head {
       margin-bottom: 14px;
     }
@@ -655,7 +672,7 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-secondary" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-secondary btn-kick" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
               S’abonner à ma chaîne Kick
             </a>
 
