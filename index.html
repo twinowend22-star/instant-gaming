@@ -682,11 +682,11 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-secondary btn-kick" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-secondary btn-kick" data-track="kick" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
               S’abonner à ma chaîne Kick
             </a>
 
-            <a class="btn btn-primary" href="https://kickbot.com/tips/Owned2win" target="_blank" rel="noopener noreferrer sponsored">
+            <a class="btn btn-primary" data-track="tips" href="https://kickbot.com/tips/Owned2win" target="_blank" rel="noopener noreferrer sponsored">
               Tips & pourboires
             </a>
           </div>
@@ -705,12 +705,13 @@
                 rel="noopener noreferrer sponsored"
                 class="partner-compact-image-link"
                 aria-label="Voir les offres Instant Gaming"
+				data-track="instant-gaming"
               >
                 <img
                   src="instant-gaming-pc-fr.png"
                   alt="Acheter vos jeux PC sur Instant Gaming"
                   class="partner-compact-image"
-                >
+				  >
               </a>
 
               <div class="partner-compact-content">
@@ -724,6 +725,7 @@
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   class="partner-compact-btn"
+				  data-track="instant-gaming"
                 >
                   Voir les offres
                 </a>
@@ -872,18 +874,31 @@
   </main>
 
   <script>
-    /* Année automatique dans le footer */
-    document.getElementById("year").textContent = new Date().getFullYear();
 
-    /* Email généré en JavaScript
-       pour ne pas l’écrire en clair dans le HTML */
-    const user = "business";
-    const domain = "owned2win.com";
-    const email = user + "@" + domain;
+  /* Année automatique dans le footer */
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    /* Affiche l’email dans le footer */
-    document.getElementById("business-contact").innerHTML =
-      'Contact & partenariats : <a href="mailto:' + email + '">' + email + '</a>';
+  /* Email généré en JavaScript */
+  const user = "business";
+  const domain = "owned2win.com";
+  const email = user + "@" + domain;
+
+  /* Affiche l’email dans le footer */
+  document.getElementById("business-contact").innerHTML =
+  'Contact & partenariats : <a href="mailto:' + email + '">' + email + '</a>';
+
+
+  /* TRACK CLIC BOUTONS */
+  document.querySelectorAll('[data-track]').forEach(function(button){
+  button.addEventListener('click', function(){
+  let name = this.getAttribute('data-track');
+  gtag('event','click_'+name,{
+  event_category:'outbound',
+  event_label:name
+  });
+  });
+  });
+
   </script>
 </body>
 </html>
