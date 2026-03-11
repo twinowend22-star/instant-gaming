@@ -377,7 +377,55 @@
       transform: translateY(-2px);
       filter: brightness(1.03);
     }
+    /* =====================
+    CARTES & ABONNEMENTS GAMING
+    ===================== */
 
+    .gaming-cards{
+      margin-top:40px;
+    }
+
+    .gaming-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .gaming-card{
+      background:#111;
+      padding:15px;
+      border-radius:12px;
+      text-align:center;
+      border:1px solid rgba(121,255,43,0.15);
+    }
+
+    .gaming-card img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:10px;
+    }
+
+    .gaming-card h3{
+      margin:8px 0;
+      font-size:16px;
+      color:#f4fff2;
+    }
+
+    .gaming-card a{
+      display:inline-block;
+      margin-top:8px;
+      padding:8px 14px;
+      background:#79ff2b;
+      color:black;
+      font-weight:bold;
+      border-radius:8px;
+      text-decoration:none;
+      transition:transform 0.2s ease;
+    }
+
+    .gaming-card a:hover{
+      transform:scale(1.05);
+    }
     /* =========================
        COLONNE DROITE
        ========================= */
@@ -733,7 +781,39 @@
             </div>
           </div>
         </div>
+        <!-- Cartes & abonnements gaming -->
+        <div class="gaming-cards">
 
+          <h2>💳 Cartes & abonnements gaming</h2>
+
+        <div class="gaming-grid">
+
+        <div class="gaming-card">
+          <img src="wow-card.jpg" alt="World of Warcraft 60 jours">
+            <h3>WoW 60 jours</h3>
+              <a href="TON LIEN PARTENAIRE" data-track="wow-card" target="_blank" rel="noopener sponsored">
+               Voir le prix
+              </a>
+            </div>
+
+        <div class="gaming-card">
+          <img src="steam-card.jpg" alt="Carte Steam">
+            <h3>Carte Steam</h3>
+              <a href="TON LIEN PARTENAIRE" data-track="steam-card" target="_blank" rel="noopener sponsored">
+               Voir le prix
+              </a>
+           </div>
+
+        <div class="gaming-card">
+          <img src="xbox-card.jpg" alt="Carte Xbox">
+            <h3>Carte Xbox</h3>
+              <a href="TON LIEN PARTENAIRE" data-track="xbox-card" target="_blank" rel="noopener sponsored">
+               Voir le prix
+              </a>
+            </div>
+
+          </div>
+        </div>  
         <!-- Colonne droite -->
         <aside class="hero-right">
           <div class="panel">
