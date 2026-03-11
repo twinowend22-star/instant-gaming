@@ -620,7 +620,74 @@
       word-break: break-all;
       opacity: 0.92;
     }
+    /* ==========================
+    MINI CARTES GAMING
+    ========================== */
 
+    .gaming-bundle{
+      display:block;
+    }
+
+    .gaming-bundle-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .gaming-mini-card{
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(121,255,43,0.12);
+      border-radius:14px;
+      padding:10px;
+      text-align:center;
+      transition:transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .gaming-mini-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.35);
+    }
+
+    .gaming-mini-card img{
+      width:100%;
+      display:block;
+      border-radius:10px;
+      margin-bottom:8px;
+    }
+
+    .gaming-mini-title{
+      margin:4px 0 8px;
+      font-size:14px;
+      font-weight:700;
+      color:#f4fff2;
+      line-height:1.3;
+    }
+
+    .gaming-mini-btn{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:9px;
+      background:#79ff2b;
+      color:#041600;
+      font-size:13px;
+      font-weight:800;
+      transition:transform 0.15s ease;
+    }
+
+    .gaming-mini-btn:hover{
+      transform:scale(1.05);
+    }
+
+/* responsive mobile */
+
+@media (max-width: 920px){
+
+.gaming-bundle-grid{
+grid-template-columns:1fr;
+}
+
+}
     /* =========================
        FOOTER
        ========================= */
@@ -779,7 +846,8 @@
                 </a>
               </div>
             </div>
-          </div>  
+          </div>
+  
 		</div>
          
         <!-- Colonne droite -->
@@ -908,29 +976,41 @@
               </div>
               <p class="link-desc">Overlays, packs streamers et éléments visuels pour améliorer ton setup de stream.</p>
               <p class="link-url">https://www.own3d.tv/en/?deal=ownedtwin35</p>
+			</a>
+            <a class="link-card gaming-bundle" href="https://www.instant-gaming.com/?igr=gamer-8c5d8e" target="_blank" rel="noopener noreferrer sponsored">
+              <div class="link-top">
+                <h3 class="link-name">Cartes & abonnements gaming</h3>
+                <span class="tag">Gaming cards</span>
+              </div>
+
+              <p class="link-desc">
+                Cartes Steam, Xbox et abonnement WoW via mon lien partenaire.
+              </p>
+
+              <div class="gaming-bundle-grid">
+
+                <div class="gaming-mini-card">
+                  <img src="wow-card.jpg" alt="World of Warcraft 60 jours">
+                  <p class="gaming-mini-title">WoW 60 jours</p>
+                  <span class="gaming-mini-btn">Voir le prix</span>
+                </div>
+
+                <div class="gaming-mini-card">
+                  <img src="steam-card.jpg" alt="Carte Steam">
+                  <p class="gaming-mini-title">Carte Steam</p>
+                  <span class="gaming-mini-btn">Voir le prix</span>
+                </div>
+
+                <div class="gaming-mini-card">
+                  <img src="xbox-card.jpg" alt="Carte Xbox">
+                  <p class="gaming-mini-title">Carte Xbox</p>
+                  <span class="gaming-mini-btn">Voir le prix</span>
+                </div>
+
+              </div>
+
+              <p class="link-url">https://www.instant-gaming.com/?igr=gamer-8c5d8e</p>
             </a>
-			  <div class="gaming-card">
-                <img src="wow-card.jpg" alt="World of Warcraft 60 jours">
-              <h3>WoW 60 jours</h3>
-                <a href="TON LIEN PARTENAIRE" data-track="wow-card" target="_blank" rel="noopener sponsored">
-                 Voir le prix
-                </a>
-              </div>
-
-              <div class="gaming-card">
-                <img src="steam-card.jpg" alt="Carte Steam">
-              <h3>Carte Steam</h3>
-                <a href="TON LIEN PARTENAIRE" data-track="steam-card" target="_blank" rel="noopener sponsored">
-                 Voir le prix
-                </a>
-              </div>
-
-              <div class="gaming-card">
-                <img src="xbox-card.jpg" alt="Carte Xbox">
-              <h3>Carte Xbox</h3>
-                <a href="TON LIEN PARTENAIRE" data-track="xbox-card" target="_blank" rel="noopener sponsored">
-                 Voir le prix
-                </a>
               </div>
             </div>
         </section>
