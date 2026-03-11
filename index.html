@@ -624,29 +624,21 @@
     MINI CARTES GAMING
     ========================== */
 
-    .gaming-bundle{
-      display:block;
-    }
-
-    .gaming-bundle-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
-      margin-top:14px;
-    }
-
     .gaming-mini-card{
+      display:block;
       background:rgba(255,255,255,0.02);
       border:1px solid rgba(121,255,43,0.12);
       border-radius:14px;
       padding:10px;
       text-align:center;
+      text-decoration:none;
       transition:transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .gaming-mini-card:hover{
       transform:translateY(-3px);
-      box-shadow:0 6px 18px rgba(0,0,0,0.35);
+      box-shadow:0 0 0 1px rgba(121,255,43,0.25),
+      0 10px 24px rgba(0,0,0,0.4);
     }
 
     .gaming-mini-card img{
@@ -654,6 +646,11 @@
       display:block;
       border-radius:10px;
       margin-bottom:8px;
+      transition:transform 0.25s ease;
+    }
+
+    .gaming-mini-card:hover img{
+      transform:scale(1.05);
     }
 
     .gaming-mini-title{
@@ -672,11 +669,12 @@
       color:#041600;
       font-size:13px;
       font-weight:800;
-      transition:transform 0.15s ease;
+      transition:transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .gaming-mini-btn:hover{
+    .gaming-mini-card:hover .gaming-mini-btn{
       transform:scale(1.05);
+      box-shadow:0 4px 12px rgba(121,255,43,0.35);
     }
 
 /* responsive mobile */
@@ -977,7 +975,7 @@ grid-template-columns:1fr;
               <p class="link-desc">Overlays, packs streamers et éléments visuels pour améliorer ton setup de stream.</p>
               <p class="link-url">https://www.own3d.tv/en/?deal=ownedtwin35</p>
 			</a>
-            <a class="link-card gaming-bundle" href="https://www.instant-gaming.com/?igr=gamer-8c5d8e" target="_blank" rel="noopener noreferrer sponsored">
+            <div class="link-card gaming-bundle">
               <div class="link-top">
                 <h3 class="link-name">Cartes & abonnements gaming</h3>
                 <span class="tag">Gaming cards</span>
@@ -989,26 +987,26 @@ grid-template-columns:1fr;
 
               <div class="gaming-bundle-grid">
 
-                <div class="gaming-mini-card">
+                <a class="gaming-mini-card" href="LIEN_WOW_ICI" data-track="wow-card" target="_blank" rel="noopener noreferrer sponsored">
                   <img src="wow-card.jpg" alt="World of Warcraft 60 jours">
                   <p class="gaming-mini-title">WoW 60 jours</p>
                   <span class="gaming-mini-btn">Voir le prix</span>
-                </div>
+                </a>
 
-                <div class="gaming-mini-card">
+                <a class="gaming-mini-card" href="LIEN_STEAM_ICI" data-track="steam-card" target="_blank" rel="noopener noreferrer sponsored">
                   <img src="steam-card.jpg" alt="Carte Steam">
                   <p class="gaming-mini-title">Carte Steam</p>
                   <span class="gaming-mini-btn">Voir le prix</span>
-                </div>
+                </a>
 
-                <div class="gaming-mini-card">
+                <a class="gaming-mini-card" href="LIEN_XBOX_ICI" data-track="xbox-card" target="_blank" rel="noopener noreferrer sponsored">
                   <img src="xbox-card.jpg" alt="Carte Xbox">
                   <p class="gaming-mini-title">Carte Xbox</p>
                   <span class="gaming-mini-btn">Voir le prix</span>
-                </div>
+                </a>
 
               </div>
-             </a>
+             </div>
               </div>
             </div>
         </section>
