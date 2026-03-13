@@ -365,7 +365,164 @@
         max-width:260px;
         margin:0 auto;
       }
-    }   
+    }
+
+    * =========================
+    STEAM BOOST VISUEL
+    ========================= */
+
+    .steam-feature{
+      grid-column: 1 / -1;
+      display: block;
+      text-decoration: none;
+      border: 1px solid rgba(121,255,43,0.22);
+      background:
+        linear-gradient(180deg, rgba(121,255,43,0.08), rgba(255,255,255,0.015)),
+        radial-gradient(circle at 10% 20%, rgba(76, 201, 240, 0.08), transparent 28%);
+      box-shadow:
+        0 0 0 1px rgba(121,255,43,0.10),
+        0 18px 40px rgba(64,255,0,0.10),
+        0 0 28px rgba(76, 201, 240, 0.06);
+    }
+
+    .steam-feature:hover{
+      transform: translateY(-4px);
+      border-color: rgba(121,255,43,0.34);
+      box-shadow:
+        0 0 0 1px rgba(121,255,43,0.18),
+        0 22px 44px rgba(64,255,0,0.16),
+        0 0 34px rgba(76, 201, 240, 0.10);
+    }
+
+    .steam-feature-layout{
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:26px;
+      align-items:center;
+    }
+
+    .steam-feature-visual{
+      position: relative;
+    }
+
+    .steam-feature-visual::before{
+      content:"";
+      position:absolute;
+      inset:-10px;
+      border-radius:22px;
+      background:
+        radial-gradient(circle, rgba(121,255,43,0.18), transparent 60%);
+      filter: blur(16px);
+      z-index:0;
+    }
+
+    .steam-feature-visual img{
+      position: relative;
+      z-index: 1;
+      width:100%;
+      display:block;
+      border-radius:20px;
+      border:1px solid rgba(121,255,43,0.18);
+      box-shadow:
+        0 0 12px rgba(121,255,43,0.32),
+        0 0 28px rgba(76,201,240,0.10),
+        0 12px 28px rgba(0,0,0,0.34);
+      transition:transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+      background:#0b0f12;
+    }
+
+    .steam-feature:hover .steam-feature-visual img{
+      transform: scale(1.03);
+      filter: brightness(1.04);
+      box-shadow:
+        0 0 18px rgba(121,255,43,0.42),
+        0 0 34px rgba(76,201,240,0.16),
+        0 18px 30px rgba(0,0,0,0.40);
+    }
+
+    .steam-tag{
+       background: linear-gradient(180deg, rgba(121,255,43,0.18), rgba(76,201,240,0.12));
+       border-color: rgba(121,255,43,0.22);
+       color:#ebffe3;
+    }
+
+    .steam-feature-content .link-name{
+      font-size: 24px;
+    }
+
+    .steam-feature-text{
+      margin:0 0 12px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:15px;
+    }
+
+    .steam-feature-list{
+      margin:0 0 14px 18px;
+      padding:0;
+      color:#e6ffd8;
+      line-height:1.7;
+    }
+
+    .steam-feature-stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:0 0 16px;
+    }
+
+    .steam-feature-stats span{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:0 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(121,255,43,0.12);
+      color:#dfffd4;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .steam-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 20px;
+      border-radius:14px;
+      background:linear-gradient(180deg, #79ff2b 0%, #59df1d 100%);
+      color:#041600;
+      font-weight:900;
+      letter-spacing:0.01em;
+      box-shadow:
+        0 10px 22px rgba(79,255,8,0.22),
+        0 0 18px rgba(121,255,43,0.12);
+      transition:transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .steam-feature:hover .steam-btn{
+      transform:translateY(-2px) scale(1.02);
+      filter:brightness(1.05);
+      box-shadow:
+        0 14px 26px rgba(79,255,8,0.28),
+        0 0 24px rgba(121,255,43,0.18);
+    }
+
+    @media (max-width: 920px){
+      .steam-feature-layout{
+        grid-template-columns:1fr;
+    }
+
+    .steam-feature-visual img{
+      max-width:260px;
+      margin:0 auto;
+    }
+
+    .steam-feature-content .link-name{
+      font-size: 21px;
+    }
+  }	
 	   
     .partner-compact {
       margin-top: 22px;
@@ -1017,13 +1174,13 @@
         <div class="steam-feature-layout">
 
           <div class="steam-feature-visual">
-            <img src="steam-owned2win.jpg" alt="Profil Steam Owned2win">
+            <img src="steam-owned2win.png" alt="Profil Steam Owned2win">
           </div>
 
           <div class="steam-feature-content">
             <div class="link-top">
-              <h3 class="link-name">Rejoins-moi sur Steam</h3>
-              <span class="tag">COMMUNAUTÉ GAMING</span>
+              <h3 class="link-name">🎮 Rejoins-moi sur Steam</h3>
+              <span class="tag steam-tag">COMMUNAUTÉ STEAM</span>
             </div>
 
             <p class="link-desc steam-feature-desc">
@@ -1031,14 +1188,20 @@
             </p>
 
             <p class="steam-feature-text">
-              Si tu veux jouer ensemble, suivre mes sessions ou simplement m’ajouter,
-              mon profil Steam est maintenant mis en avant ici.
+              Si tu veux jouer avec moi, suivre mes sessions ou simplement m’ajouter,
+              c’est ici que ça se passe.
             </p>
+
+            <div class="steam-feature-stats">
+              <span>🎮 63 jeux</span>
+              <span>⭐ Niveau 20</span>
+              <span>👥 Ajoute-moi</span>
+            </div>
 
             <ul class="steam-feature-list">
               <li>Voir mes jeux et mon activité</li>
               <li>M’ajouter en ami sur Steam</li>
-              <li>Rejoindre plus facilement mes sessions</li>
+              <li>Rejoindre mes sessions plus facilement</li>
             </ul>
 
             <div class="steam-feature-actions">
@@ -1049,7 +1212,7 @@
           </div>
 
         </div>
-	  </a>
+      </a>
             <a class="link-card" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
               <div class="link-top">
                 <h3 class="link-name">Kick</h3>
