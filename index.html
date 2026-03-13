@@ -272,6 +272,101 @@
        BLOC PARTENAIRE COMPACT
        Sous les boutons, colonne gauche
        ========================= */
+	/* =========================
+       STEAM FEATURED CARD
+       ========================= */
+
+    .steam-feature{
+      grid-column:1 / -1;
+      display:block;
+      text-decoration:none;
+    }
+
+    .steam-feature-layout{
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:22px;
+      align-items:center;
+    }
+
+    .steam-feature-visual img{
+     width:100%;
+     display:block;
+     border-radius:16px;
+     border:1px solid rgba(121,255,43,0.14);
+     box-shadow:0 10px 24px rgba(0,0,0,0.28);
+    }
+
+    .steam-feature-content{
+      min-width:0;
+    }
+
+    .steam-feature-desc{
+      margin-bottom:10px;
+    }
+
+    .steam-feature-text{
+      margin:0 0 12px;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:15px;
+    }
+
+    .steam-feature-list{
+      margin:0 0 16px 18px;
+      padding:0;
+      color:#dfffd2;
+      line-height:1.6;
+    }
+
+    .steam-feature-list li{
+      margin-bottom:4px;
+    }
+
+    .steam-feature-actions{
+      margin-bottom:12px;
+    }
+
+    .steam-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 18px;
+      border-radius:12px;
+      background:linear-gradient(180deg, #79ff2b 0%, #59df1d 100%);
+      color:#041600;
+      font-weight:800;
+      letter-spacing:0.01em;
+      box-shadow:0 8px 18px rgba(79,255,8,0.18);
+      transition:transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .steam-feature:hover .steam-btn{
+      transform:translateY(-2px);
+      filter:brightness(1.04);
+      box-shadow:0 12px 22px rgba(79,255,8,0.24);
+    }
+
+    .steam-feature:hover .steam-feature-visual img{
+      transform:scale(1.02);
+    }
+
+    .steam-feature-visual img{
+      transition:transform 0.2s ease;
+    }
+
+    @media (max-width: 920px){
+      .steam-feature-layout{
+        grid-template-columns:1fr;
+      }
+
+      .steam-feature-visual img{
+        max-width:260px;
+        margin:0 auto;
+      }
+    }   
+	   
     .partner-compact {
       margin-top: 22px;
       padding: 18px;
@@ -713,21 +808,14 @@
       box-shadow:0 4px 12px rgba(121,255,43,0.35);
     }
 
-@media (max-width: 920px){
-  .gaming-bundle-grid{
-    grid-template-columns:1fr;
-  }
-}
+    /* responsive mobile */
 
-/* responsive mobile */
+    @media (max-width: 920px){
 
-@media (max-width: 920px){
-
-.gaming-bundle-grid{
-grid-template-columns:1fr;
-}
-
-}
+      .gaming-bundle-grid{
+        grid-template-columns:1fr;
+      }
+    }
     /* =========================
        FOOTER
        ========================= */
@@ -925,6 +1013,43 @@ grid-template-columns:1fr;
           </div>
 
           <div class="link-grid">
+	  <a class="link-card steam-feature" href="https://steamcommunity.com/id/Owned2win/" target="_blank" rel="noopener noreferrer">
+        <div class="steam-feature-layout">
+
+          <div class="steam-feature-visual">
+            <img src="steam-owned2win.jpg" alt="Profil Steam Owned2win">
+          </div>
+
+          <div class="steam-feature-content">
+            <div class="link-top">
+              <h3 class="link-name">Rejoins-moi sur Steam</h3>
+              <span class="tag">COMMUNAUTÉ GAMING</span>
+            </div>
+
+            <p class="link-desc steam-feature-desc">
+              Retrouve mon profil Steam pour suivre mon activité, voir mes jeux et rejoindre l’univers gaming O2W.
+            </p>
+
+            <p class="steam-feature-text">
+              Si tu veux jouer ensemble, suivre mes sessions ou simplement m’ajouter,
+              mon profil Steam est maintenant mis en avant ici.
+            </p>
+
+            <ul class="steam-feature-list">
+              <li>Voir mes jeux et mon activité</li>
+              <li>M’ajouter en ami sur Steam</li>
+              <li>Rejoindre plus facilement mes sessions</li>
+            </ul>
+
+            <div class="steam-feature-actions">
+              <span class="steam-btn">Voir mon profil Steam</span>
+            </div>
+
+            <p class="link-url">https://steamcommunity.com/id/Owned2win/</p>
+          </div>
+
+        </div>
+	  </a>
             <a class="link-card" href="https://kick.com/owned2win" target="_blank" rel="noopener noreferrer">
               <div class="link-top">
                 <h3 class="link-name">Kick</h3>
