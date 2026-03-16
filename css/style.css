@@ -31,7 +31,7 @@
   --radius-xl: 28px;
   --radius-lg: 20px;
   --radius-md: 14px;
-  --max-width: 1280px;
+  --site-width: 1120px;
 }
 
 /* =========================
@@ -79,16 +79,16 @@ img {
 ========================= */
 .page {
   width: 100%;
-  max-width: 1120px;
+  max-width: var(--site-width);
   margin: 0 auto;
   position: relative;
 }
 
 .page-shell {
-  width: min(calc(100% - 42px), var(--max-width));
-  margin: 22px auto;
-  padding: 22px;
-  border-radius: 32px;
+  width: min(100%, var(--site-width));
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 26px;
   background: linear-gradient(180deg, rgba(5, 16, 8, 0.96), rgba(3, 10, 5, 0.95));
   box-shadow: 0 0 0 1px rgba(92, 255, 92, 0.08), 0 20px 80px rgba(0, 0, 0, 0.55);
   overflow: hidden;
