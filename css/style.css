@@ -158,6 +158,7 @@ img {
 ========================= */
 .nav-wrap {
   margin-top: 18px;
+  padding: 0 42px;
   display: flex;
   justify-content: flex-start;
 }
@@ -885,6 +886,7 @@ h1 {
 ========================================================= */
 .hero-grid {
   margin-top: 18px;
+  padding: 0 42px 32px;
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
   gap: 26px;
@@ -906,7 +908,7 @@ h1 {
 
 .hero-copy p {
   margin: 0;
-  max-width: 33ch;
+  max-width: 42ch;
   color: var(--text-soft);
   font-size: 1.08rem;
   line-height: 1.75;
