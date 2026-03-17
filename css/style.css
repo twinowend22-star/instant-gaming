@@ -912,7 +912,7 @@ h1 {
 
 .hero-copy p {
   margin: 0;
-  max-width: 42ch;
+  max-width: 48ch;
   color: var(--text-soft);
   font-size: 1.05rem;
   line-height: 1.75;
