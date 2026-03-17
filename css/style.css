@@ -928,7 +928,7 @@ h1 {
   height: 42px;
   width: auto;
   display: inline-block;
-  transform: translateY(2px);
+  transform: translateY(4px);
 }
 
 .cta-btn {
