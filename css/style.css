@@ -898,7 +898,7 @@ h1 {
 }
 
 .hero-copy h1 {
-  margin: 8px 0 5px;
+  margin: 8px 0 3px;
   font-size: clamp(2.2rem, 3.6vw, 3.8rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
