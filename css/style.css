@@ -918,6 +918,12 @@ h1 {
   line-height: 1.75;
 }
 
+.youtube-red {
+  color: #ff2b2b;
+  text-shadow: 0 0 10px rgba(255,0,0,0.4);
+  font-weight: 600;
+}
+
 .cta-btn {
   display: inline-flex;
   align-items: center;
